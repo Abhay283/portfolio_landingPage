@@ -1,0 +1,299 @@
+@import url("https://fonts.google.com/specimen/Poppins");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #070606;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'poppins' sans-serif;
+}
+
+body {
+    font-family: 'poppins' sans-serif;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+header {
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.classic {
+    background-color: transparent;
+    font-weight: 800;
+    cursor: pointer;
+    font-size: 1.45rem;
+    color: #b74b4b;
+    transition: 0.5s ease;
+}
+
+.classic:hover {
+    transform: scale(1.1);
+    color: #ea1089;
+    text-decoration: underline;
+
+}
+
+.background {
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul {
+    display: flex;
+    background: transparent;
+}
+
+nav li {
+    background: transparent;
+    list-style: none;
+    margin-right: 20px;
+    margin-top: -1.2rem;
+}
+
+nav li a {
+    background-color: transparent;
+    font-size: 1rem;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #fff;
+}
+
+nav li a:hover,
+nav li a:active {
+    transform: scale(1.3);
+    color: #ea1089;
+    border-bottom: 3px solid #ea1089;
+}
+
+@media(max-width:700px) {
+    nav {
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid #b74b4b;
+        border-bottom: 3px solid #b74b4b;
+        padding: 1rem solid;
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+
+    }
+
+    nav:active {
+        display: block;
+    }
+
+    nav li a {
+        display: block;
+        font-size: 2rem;
+    }
+
+    nav li a:hover,
+    nav li a:active {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 5rem 9% 5rem;
+    }
+}
+
+section {
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: #070606;
+    ;
+}
+
+.home .headerheading h1 {
+    font-size: 4rem;
+    font-weight: 70%;
+    line-height: 1.3;
+    margin: 3rem 0;
+}
+
+.heading {
+    width: 60rem;
+    margin-left: 60rem;
+    background: transparent;
+    margin-top: -22rem;
+    font-size: 4rem;
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.sub-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: transparent;
+    color: #fff;
+    margin-top: 1rem;
+    font-family: 'poppins' sans-serif;
+    letter-spacing: 2px;
+    min-width: 280px;
+}
+
+.sub-heading span {
+    position: relative;
+}
+
+.sub-heading span::before {
+    content: " software Developer ";
+    color: #b74b4b;
+    animation: words 20s infinite;
+}
+
+.sub-heading span::after {
+    content: " ";
+    background-color: #070606;
+    position: absolute;
+    width: calc(100%+8px);
+    height: 100%;
+    border-left: 3px solid #070606;
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor {
+    to {
+        border-left: 3px solid #b74b4b;
+    }
+}
+
+@keyframes words {
+
+    0%,
+    20% {
+        content: " Web developer"
+    }
+
+    21%,
+    40% {
+        content: " Software Developer"
+    }
+
+    41%,
+    60% {
+        content: " Fronted Developer"
+    }
+
+    61%,
+    80% {
+        content: " Backend Developer"
+    }
+
+    81%,
+    100% {
+        content: " Git and Github Developer"
+    }
+}
+
+@media(max-width:1000px) {
+    .home {
+        gap: 4rem;
+    }
+}
+
+@media(max-width:700px) {
+    .home {
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .home .headerheading h3 {
+        font-size: 2.5rem;
+    }
+    .headerheading h1{
+        font-size: 5rem;
+    }
+
+    .home-img img{
+        width:70%;
+        margin-top:4rem;
+    }
+}
+
+.para {
+    width: 50rem;
+    background: transparent;
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 3px;
+}
+
+.headerheading span {
+    color: crimson;
+}
+
+.home-img {
+    border-radius: 50%;
+}
+
+.home-img .img-pic {
+    position: relative;
+    border-radius: 50%;
+    box-shadow: 0 2px solid #b74b4b;
+    margin-top: 8rem;
+    width: 32vw;
+    height: 600px;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.home-img .img-pic:hover {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid #ff0202;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem;
+    transition: 0.3s ease;
+    color: #b74b4b;
+}
+
+.social-icons a:hover {
+    color: #070606;
+    transform: scale(1.3) translateY(-5px);
+    background-color: transparent;
+    border: #fff;
+    box-shadow: 1px .2px .2px .4px #e10c0c;
+}
