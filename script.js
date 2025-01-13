@@ -19,7 +19,7 @@ async function checkWheather(city) {
       Math.round(data.main.temp) + "°C";
     document.querySelector(".humidity").innerHTML = data.wind.speed + " km/h";
     // document.getElementById("weather-condition").textContent = weatherCondition;
-
+    console.log(data.daily)
     console.log(data.weather[0].main);
     if (data.weather[0].main == "Clouds") {
       weatherIcon.src = "img/clouds.png";
@@ -38,28 +38,7 @@ async function checkWheather(city) {
   }
 }
 
-// function checkPestDiseaseAlerts(temp, humidity, weatherCondition) {
-//   let alertMessage = "No alerts.";
 
-//   // Pest/Disease conditions (example logic)
-//   if (humidity > 80) {
-//       alertMessage = "High humidity detected. Risk of fungal diseases and pests like aphids.";
-//   }
-
-//   if (temp > 30) {
-//       alertMessage = "High temperature detected. Watch out for heat-sensitive pests like spider mites.";
-//   }
-
-//   if (weatherCondition.includes("rain")) {
-//       alertMessage = "Rainy conditions. Risk of fungal growth and mold.";
-//   }
-
-//   if (temp < 10) {
-//       alertMessage = "Cold temperatures detected. Risk of frost and cold-related plant stress.";
-//   }
-
-//   document.getElementById("alert").textContent = alertMessage;
-// }
 
 
 searchBtn.addEventListener("click", () => {
